@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Calci</title>  
+  <link rel="stylesheet" href="calc.css">
+</head>  
+<body>  
+    <center>  
+   <!-- <h1 id="head" >Simple Calculator</h1>   -->
+   <table id="table">  
+    <tr><h1 id="head" >Simple Calculator</h1></tr>
+       <tr><input id = "display"></tr>  
+       
+       <tr><td > <button id="button1" onclick = C()><span id="key">A/C</span></button></td>  
+           <td> <button id="button1" onclick = fun("+")><span id="key">+/-</span></button></td>  
+           <td> <button id="button1" onclick = fun("%")><span id="key">%</span></button></td>
+           <td><button id="button1" onclick = fun("/")><span id="key">/</span></button></td>      
+       </tr>  
+       <tr><td> <button id="button" onclick = fun(7)><span id="key">7</span></button></td>  
+           <td> <button id="button" onclick = fun(8)><span id="key">8</span></button></td>  
+           <td> <button id="button" onclick = fun(9)><span id="key">9</span></button></td> 
+           <td><button id="button1" onclick = fun("*")><span id="key">*</span></button></td>   
+       </tr>  
+       <tr><td> <button id="button" onclick = fun(6)><span id="key">6</span></button></td>  
+           <td> <button id="button" onclick = fun(5)><span id="key">5</span></button></td>  
+           <td> <button id="button"onclick = fun(4)><span id="key">4</span></button></td>  
+           <td> <button id="button1" onclick = fun("-")><span id="key">-</span></button></td>  
+       </tr>  
+       <tr><td> <button id="button" onclick = fun(1)><span id="key">1</span></button></td>  
+           <td> <button id="button"onclick = fun(2)><span id="key">2</span></button></td>  
+           <td> <button id="button"onclick = fun(3)><span id="key">3</span></button></td>  
+           <td> <button id="button1"onclick = fun("+")><span id="key">+</span></button></td>  
+       </tr> 
+       <tr>
+        <td colspan="2"><button id="button3"onclick = fun(0)><span id="key">0</span></button></td>  
+        <td> <button id="button" onclick = fun(".")><span id="key">.</span></button></td>  
+        <td> <button id="button1" onclick = res()><span id="key">=</span></button></td> 
+       </tr> 
+    </table>  
+    </center>  
+    <script type = text/javascript>
+     function fun(a)  
+        {  
+            document.getElementById("display").value+=a;  
+        }  
+        function C()  
+        {  
+            document.getElementById("display").value = "";  
+        }  
+        function res()  
+        {   
+            var a = document.getElementById("display").value;  
+            document.getElementById("display").value=a+"="+eval(a);  
+        }     
+    </script>  
+</body>  
+</html>  
